@@ -1,0 +1,33 @@
+<%= form_for @user, remote: true, format: :json, html: {multipart: true}  do |f| %>
+  <div class="row"> <fieldset class="large-12 columns">
+    <legend class="ribbon"><strong class="ribbon-content">Step One</strong></legend>
+    <div class='arrow-ribbon'>Start by giving us all your personal data</div>
+  <div id="error_messages"></div>
+    <div class="large-6 columns">
+  <div class="row collapse">
+    <div class="large-6 columns"><%= f.label :first_name %></div>
+    <div class="large-6 columns"><%= f.text_field :first_name, maxlength: 32, minlength: 2 %></div>
+  </div>
+  <div class="row collapse">
+    <div class="large-6 columns"><%= f.label :last_name %></div>
+    <div class="large-6 columns"><%= f.text_field :last_name %></div>
+  </div>
+  <div class="row collapse">
+    <div class="large-6 columns"><%= f.label :email_address %></div>
+    <div class="large-6 columns"><%= f.email_field :email_address %></div>
+  </div>
+  <div class="row collapse">
+    <div class="large-6 columns"><%= f.label :birthday %></div>
+    <%= f.date_select :birthday, start_year: hundred_years_ago, include_blank: true %>
+  </div>
+  <div class="row collapse">
+    <div class="large-6 columns"><%= f.label :shoe_size %></div>
+    <div class="large-6 columns"><%= f.number_field :shoe_size, in: 20..50 %></div>
+  </div>
+
+    </div>
+    <div class="large-6 columns submit-outer"><div class="row collapse submit-button">
+        <%= f.submit 'Save', class: 'button large' %>
+      </div></div>
+  </fieldset></div>
+<% end %>

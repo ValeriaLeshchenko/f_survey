@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Ice cream:</b>
+  <%= @survey.ice_cream %>
+</p>
+
+<p>
+  <b>Superhero:</b>
+  <%= @survey.superhero %>
+</p>
+
+<p>
+  <b>Movie star:</b>
+  <%= @survey.movie_star %>
+</p>
+
+<p>
+  <b>World end:</b>
+  <%= @survey.world_end %>
+</p>
+
+<p>
+  <b>Super bowl:</b>
+  <%= @survey.super_bowl %>
+</p>
+
+
+<%= link_to 'Edit', edit_survey_path(@survey) %> |
+<%= link_to 'Back', surveys_path %>

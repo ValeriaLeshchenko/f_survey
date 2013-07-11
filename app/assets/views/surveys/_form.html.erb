@@ -1,0 +1,40 @@
+<%= form_for(@survey, remote: true) do |f| %>
+  <% if @survey.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@survey.errors.count, "error") %> prohibited this survey from being saved:</h2>
+
+      <ul>
+      <% @survey.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="row">
+    <div class="large-6 columns">
+  <div class="row">
+    <div class="large-3 columns"><%= f.label :ice_cream %></div>
+    <div class="large-3 columns"><%= f.text_field :ice_cream %></div>
+  </div>
+  <div class="row">
+    <div class="large-3 columns"><%= f.label :superhero %></div>
+    <div class="large-3 columns"><%= f.text_field :superhero %></div>
+  </div>
+  <div class="row">
+    <div class="large-3 columns"><%= f.label :movie_star %></div>
+    <div class="large-3 columns"><%= f.text_field :movie_star %></div>
+  </div>
+  <div class="row">
+    <div class="large-3 columns"><%= f.label :world_end %></div>
+    <div class="large-3 columns"><%= f.date_select :world_end, start_year: current_year, end_year: thousand_years_later %></div>
+  </div>
+  <div class="row">
+    <div class="large-3 columns"><%= f.label :super_bowl %></div>
+    <div class="large-3 columns"><%= f.text_field :super_bowl %></div>
+  </div>
+  <div class="row">
+    <%= f.submit class: 'create-survey' %>
+  </div>
+    </div>
+  </div>
+<% end %>

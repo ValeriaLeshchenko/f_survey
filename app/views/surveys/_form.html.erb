@@ -1,0 +1,33 @@
+<%= form_for @survey, remote: true, format: :json, html: {multipart: true}  do |f| %>
+  <div class="row"> <fieldset class="large-12 columns">
+    <legend class="ribbon"><strong class="ribbon-content">Step Two</strong></legend>
+    <div class='arrow-ribbon'>Take this survey so we can learn about you</div>
+  <div id="error_messages"></div>
+    <div class="large-6 columns">
+  <div class="row collapse">
+    <div class="large-6 columns"><%= f.label 'What is your favorite ice-cream?' %></div>
+    <div class="large-6 columns"><%= f.text_field :ice_cream %></div>
+  </div>
+  <div class="row collapse">
+    <div class="large-6 columns"><%= f.label 'Who is your favorite superhero?' %></div>
+    <div class="large-6 columns"><%= f.text_field :superhero %></div>
+  </div>
+  <div class="row collapse">
+    <div class="large-6 columns"><%= f.label 'Who is your favorite movie star?' %></div>
+    <div class="large-6 columns"><%= f.text_field :movie_star %></div>
+  </div>
+  <div class="row collapse">
+    <div class="large-6 columns"><%= f.label 'When do you think the world will end?' %></div>
+    <%= f.date_select :world_end, start_year: hundred_years_ago, include_blank: true %>
+  </div>
+  <div class="row collapse">
+    <div class="large-6 columns"><%= f.label 'Who will win the Super Bowl this year?' %></div>
+    <div class="large-6 columns"><%= f.text_field :super_bowl %></div>
+  </div>
+
+    </div>
+    <div class="large-6 columns submit-outer"><div class="row collapse submit-button">
+    <%= f.submit class: 'create-survey button large' %>
+    </div></div>
+     </fieldset></div>
+<% end %>
