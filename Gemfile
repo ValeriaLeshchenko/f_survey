@@ -15,7 +15,7 @@ group :assets do
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
   # gem 'therubyracer', :platforms => :ruby
-  gem 'zurb-foundation'
+  gem 'zurb-foundation', '= 3.2.5'
   gem 'uglifier', '>= 1.0.3'
 end
 
@@ -37,3 +37,5 @@ gem "mongoid", "~> 3.1.4"
 
 # To use debugger
 # gem 'debugger'
+
+gem "mime-types", "~> 1.23"

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  ice_cream: MyString
+  superhero: MyString
+  movie_star: MyString
+  world_end: 2013-07-07
+  super_bowl: MyString
+
+two:
+  ice_cream: MyString
+  superhero: MyString
+  movie_star: MyString
+  world_end: 2013-07-07
+  super_bowl: MyString
