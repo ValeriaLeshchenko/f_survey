@@ -127,6 +127,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
+  compass
   jquery-rails
   mime-types (~> 1.23)
   mongoid (~> 3.1.4)
