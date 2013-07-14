@@ -18,7 +18,7 @@
   </div>
   <div class="row collapse">
     <div class="large-6 columns"><%= f.label 'When do you think the world will end?' %></div>
-    <%= f.date_select :world_end, start_year: hundred_years_ago, include_blank: true %>
+    <%= f.date_select :world_end, start_year: current_year, end_year: thousand_years_later, include_blank: true %>
   </div>
   <div class="row collapse">
     <div class="large-6 columns"><%= f.label 'Who will win the Super Bowl this year?' %></div>
