@@ -7,7 +7,7 @@ require "action_mailer/railtie"
 require "active_resource/railtie"
 require "sprockets/railtie"
 require "rails/test_unit/railtie"
-require "sass-rails"
+#require "sass-rails"
 
 if defined?(Bundler)
   # If you precompile assets before deploying to production, use this line
@@ -18,9 +18,9 @@ end
 
 module FSurvey
   class Application < Rails::Application
-    config.sass.load_paths ||= []
-    config.sass.load_paths << "#{Rails.root}/app/assets/stylesheets"
-    config.sass.load_paths << "#{Gem.loaded_specs['zurb-foundation'].full_gem_path}/frameworks/foundation/stylesheets"
+    #config.sass.load_paths ||= []
+    #config.sass.load_paths << "#{Rails.root}/app/assets/stylesheets"
+    #config.sass.load_paths << "#{Gem.loaded_specs['zurb-foundation'].full_gem_path}/frameworks/foundation/stylesheets"
 
     #path = File.join Gem.loaded_specs['zurb-foundation'].full_gem_path, 'scss'
     #    config.sass.load_paths << path
