@@ -18,9 +18,9 @@ end
 
 module FSurvey
   class Application < Rails::Application
-    #config.sass.load_paths ||= []
-    #config.sass.load_paths << "#{Rails.root}/app/assets/stylesheets"
-    #config.sass.load_paths << "#{Gem.loaded_specs['zurb-foundation'].full_gem_path}/frameworks/foundation/stylesheets"
+    config.sass.load_paths ||= []
+    config.sass.load_paths << "#{Rails.root}/app/assets/stylesheets"
+    config.sass.load_paths << "#{Gem.loaded_specs['zurb-foundation'].full_gem_path}/frameworks/zurb-foundation/stylesheets"
 
     #path = File.join Gem.loaded_specs['zurb-foundation'].full_gem_path, 'scss'
     #    config.sass.load_paths << path
