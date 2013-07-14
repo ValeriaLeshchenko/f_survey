@@ -48,10 +48,10 @@ class UsersController < ApplicationController
         session[:user] = @user
         @current_step = session[:step]
         format.html { redirect_to root_path }
-        format.json { render json: {:location => url_for(@user)}, status: 302 }
+        format.json { render json: {:location => url_for(@user).gsub('\"', '"')}, status: 302 }
       else
         format.html { render action: "new" }
-        format.json { render json: {:errors => @user.errors}, status: 422 }
+        format.json { render json: {:errors => @user.errors.gsub('\"', '"')}, status: 422 }
       end
     end
 
